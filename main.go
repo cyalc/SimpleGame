@@ -13,9 +13,8 @@ Algorithm :
 3 - ) Get input and fill it to array
 4 - ) compare it and return the point
 5 - ) Do this until Point +n
-
-
 **/
+
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
 
@@ -111,13 +110,9 @@ func getGamePoints(sourceNumbers []int, inputNumbers []int) (int, int) {
 }
 
 func getInput() int {
-
 	fmt.Println("Please enter a 4-digit number...")
-
-
 	var i int
 	_, err := fmt.Scan(&i)
-
 	if err != nil {
 		fmt.Println("An error has occurred : ", err)
 		return -1
