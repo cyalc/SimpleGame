@@ -87,6 +87,8 @@ func getLengthOfInteger(n int) int {
 	return length
 }
 
+
+
 func getGamePoints(sourceNumbers []int, inputNumbers []int) (int, int) {
 	pointPlusOne := 0
 	pointMinusOne := 0
