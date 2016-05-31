@@ -1,4 +1,4 @@
-package main
+package game
 
 import (
 	"math/rand"
@@ -47,7 +47,7 @@ var getGamePointsTable = []struct {
 func TestGenerateUniqueNumbers(t *testing.T) {
 	rand.Seed(time.Now().UTC().UnixNano())
 	for i := 0; i < 12; i++ {
-		actual := GenerateUniqueRandomNumbers(i)
+		actual := generateUniqueRandomNumbers(i)
 
 		if !isSliceUnique(actual) {
 			t.Errorf("GenerateUniqueNumbers (%d) failed, slice is %s", i, actual)
@@ -57,7 +57,7 @@ func TestGenerateUniqueNumbers(t *testing.T) {
 
 func TestFillNumberToArray(t *testing.T) {
 	for _, input := range fillNumberToArrayTests {
-		actual := FillNumberToArray(input.n)
+		actual := fillNumberToArray(input.n)
 		if !isEqual(actual, input.expected) {
 			t.Errorf("input: %d output : %d  expected : %d", input.n, actual, input.expected)
 		}
